@@ -104,7 +104,7 @@ export default function LiveSession() {
                 className={`px-5 py-2 rounded-xl font-bold text-sm transition-all duration-200 ${
                   isActive
                     ? 'bg-red-500/20 border border-red-500/40 text-red-300 hover:bg-red-500/30'
-                    : 'bg-gradient-to-r from-saffron-500 to-orange-500 text-white shadow-lg shadow-saffron-500/30 hover:scale-105'
+                    : 'bg-linear-to-r from-saffron-500 to-orange-500 text-white shadow-lg shadow-saffron-500/30 hover:scale-105'
                 }`}
               >
                 {isActive ? '⏹ End Session' : '▶ Start Session'}

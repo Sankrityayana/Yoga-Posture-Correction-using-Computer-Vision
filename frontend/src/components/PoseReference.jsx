@@ -14,7 +14,7 @@ export default function PoseReference({ pose }) {
       </div>
 
       {/* Image/Video Container */}
-      <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-black/20 mb-3 flex-shrink-0">
+      <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-black/20 mb-3 shrink-0">
         <AnimatePresence mode="wait">
           {!showVideo ? (
             <motion.div

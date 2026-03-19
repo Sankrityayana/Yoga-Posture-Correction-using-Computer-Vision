@@ -165,10 +165,10 @@ export const POSES = {
       'Place right foot on inner thigh',
       'Join palms at chest (Namaste)',
       'Raise arms overhead',
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/tVWp1Fk7s0A',
       'Focus gaze on one point',
     ],
+    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
+    youtubeUrl: 'https://www.youtube.com/embed/tVWp1Fk7s0A',
     color: '#0d9488',
     joints: [
       {
@@ -223,10 +223,10 @@ export const POSES = {
       'Back heel at 45°',
       'Bend right knee over ankle',
       'Raise arms overhead',
-    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/LJcKxJKXMxg',
       'Look up between hands',
     ],
+    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
+    youtubeUrl: 'https://www.youtube.com/embed/LJcKxJKXMxg',
     color: '#e11d48',
     joints: [
       {
@@ -279,12 +279,12 @@ export const POSES = {
     guidance: [
       'Feet 4-5 feet apart',
       'Right foot out 90°, left foot in slightly',
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/2S33F4kQrhs',
       'Bend right knee over ankle',
       'Arms parallel to floor',
       'Gaze over right fingertips',
     ],
+    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
+    youtubeUrl: 'https://www.youtube.com/embed/2S33F4kQrhs',
     color: '#d97706',
     joints: [
       {
@@ -346,12 +346,12 @@ export const POSES = {
     guidance: [
       'Start on hands and knees',
       'Push hips up and back',
-    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/FjMxaqKxjBg',
       'Straighten arms and legs',
       'Press heels toward floor',
       'Head between arms',
     ],
+    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
+    youtubeUrl: 'https://www.youtube.com/embed/FjMxaqKxjBg',
     color: '#0891b2',
     joints: [
       {
@@ -411,14 +411,14 @@ export const POSES = {
     description: 'Rise like a cobra — open the chest and strengthen the spine.',
     benefits: ['Opens chest', 'Strengthens spine', 'Reduces back pain'],
     guidance: [
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/s-16lMoHvMM',
       'Lie face down',
       'Place palms under shoulders',
       'Press up, straightening arms',
       'Roll shoulders back and down',
       'Keep hips on floor',
     ],
+    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
+    youtubeUrl: 'https://www.youtube.com/embed/s-16lMoHvMM',
     color: '#7c3aed',
     joints: [
       {
@@ -460,14 +460,14 @@ export const POSES = {
     description: 'A restful pose of surrender — perfect for rest and reflection.',
     benefits: ['Releases tension', 'Stretches hips', 'Calms the mind'],
     guidance: [
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/qKXLlzuVWFc',
       'Kneel, toes together',
       'Sit back on heels',
       'Fold forward, arms extended',
       'Forehead rests on mat',
       'Breathe deeply',
     ],
+    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
+    youtubeUrl: 'https://www.youtube.com/embed/qKXLlzuVWFc',
     color: '#059669',
     joints: [
       {

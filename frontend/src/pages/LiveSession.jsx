@@ -74,7 +74,8 @@ export default function LiveSession() {
     const existing = JSON.parse(localStorage.getItem(SESSION_KEY) || '[]');
     localStorage.setItem(SESSION_KEY, JSON.stringify([session, ...existing]));
     // Try backend save (non-blocking)
-    axios.post('http://localhost:8000/save-session', session).catch(() => {});
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    axios.post(`${apiUrl}/save-session`, session).catch(() => {});
     setSessionDone(true);
   };
 

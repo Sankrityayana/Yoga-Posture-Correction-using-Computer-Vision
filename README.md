@@ -1,133 +1,115 @@
-# 🪷 Sankrityayana — AI Yoga Posture Correction
+# Sankrityayana - AI Yoga Posture Correction
 
-> **Chanakya IKS Software Hackathon** · Computer Vision + Indian Knowledge Systems
+Sankrityayana is a real-time yoga posture assistant built for the Chanakya IKS Software Hackathon. It combines browser-side computer vision with rule-based pose scoring to give immediate correction feedback while preserving user privacy.
 
-A real-time AI yoga coach that uses your webcam and MediaPipe to detect body keypoints, calculate joint angles, and give instant posture corrections — based on classical yoga principles.
+The webcam stream is processed in the browser using MediaPipe Pose. The backend is lightweight and handles optional analysis and session persistence.
 
----
+## What This Project Does
 
-## 🚀 Quick Start
+- Tracks body landmarks in real time from webcam input.
+- Evaluates selected asanas using configurable joint-angle rules.
+- Displays score, pose quality, and corrective feedback instantly.
+- Stores session summaries in local storage and optionally in MongoDB via FastAPI.
 
-### Frontend (React + Vite + MediaPipe)
+## Main Features
 
-1. Set up your environment variables:
+- Real-time pose detection with MediaPipe Pose.
+- Weighted 0-100 scoring model with per-joint tolerance.
+- Feedback panel with top actionable corrections.
+- Session timer, best score, average score, and score history chart.
+- Dashboard view for session history.
+- Sanskrit and English pose metadata with guided cues.
+
+## Supported Asanas
+
+- Tadasana (Mountain Pose)
+- Trikonasana (Triangle Pose)
+- Vrikshasana (Tree Pose)
+- Virabhadrasana I (Warrior I)
+- Virabhadrasana II (Warrior II)
+- Adho Mukha Svanasana (Downward Dog)
+- Bhujangasana (Cobra Pose)
+- Balasana (Child's Pose)
+
+## Tech Stack
+
+- Frontend: React, Vite, Tailwind CSS, Framer Motion
+- CV Runtime: MediaPipe Pose (browser)
+- Backend: FastAPI, Pydantic, Motor, Uvicorn/Gunicorn
+- Database: MongoDB (optional)
+
+## Quick Start
+
+### 1. Frontend
+
 ```bash
 cd frontend
 cp .env.example .env
-```
-2. Install and run:
-```bash
 npm install
 npm run dev
 ```
-Open: **http://localhost:5173**
 
-### Backend (FastAPI + MongoDB)
+Frontend URL: http://localhost:5173
+
+### 2. Backend
 
 ```bash
 cd backend
+python -m venv .venv_fresh
+.venv_fresh\Scripts\activate
 pip install -r requirements.txt
-
-# For Development:
 uvicorn main:app --reload --port 8000
-
-# For Production:
-gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
-```
-API Docs: **http://localhost:8000/docs**
-
-> **Note**: MongoDB is optional. Sessions are saved to localStorage even without the backend.
-
----
-
-## 🧘 Features
-
-| Feature | Description |
-|---------|-------------|
-| 🎯 Real-time Detection | MediaPipe tracks 33 body keypoints at 30fps |
-| 🦴 Skeleton Overlay | Color-coded skeleton drawn on canvas |
-| 📐 Angle Analysis | Joint angles computed via dot-product math |
-| 📊 Pose Score | Weighted 0–100 score per session |
-| 🔔 Instant Corrections | Specific feedback per joint |
-| 📈 Dashboard | History, best scores, session charts |
-| 🇮🇳 IKS Foundation | Sanskrit names + classical alignment rules |
-
----
-
-## 🧘 Supported Asanas (8 Poses)
-
-| Sanskrit | English | Difficulty |
-|----------|---------|------------|
-| ताडासन | Tadasana (Mountain) | Beginner |
-| त्रिकोणासन | Trikonasana (Triangle) | Beginner |
-| वृक्षासन | Vrikshasana (Tree) | Beginner |
-| वीरभद्रासन १ | Warrior I | Intermediate |
-| वीरभद्रासन २ | Warrior II | Intermediate |
-| अधोमुखश्वानासन | Downward Dog | Beginner |
-| भुजङ्गासन | Bhujangasana (Cobra) | Beginner |
-| बालासन | Balasana (Child's) | Beginner |
-
----
-
-## 🏗️ Architecture
-
-```
-Webcam → MediaPipe (browser, CDN)
-         ↓ 33 Keypoints
-         ↓ Angle Calculation (dot-product)
-         ↓ Pose Evaluator (weighted scoring)
-         ↓ React UI (canvas overlay + feedback)
-         ↓ FastAPI (optional session storage)
-         ↓ MongoDB
 ```
 
----
+Backend URL: http://localhost:8000
 
-## � Deployment
+## Documentation Map
 
-Ready to deploy to production?
+- Setup Guide: docs/setup-guide.md
+- Architecture: docs/architecture.md
+- Algorithm Details: docs/algorithm.md
+- API Reference: docs/api-reference.md
+- Troubleshooting: docs/troubleshooting.md
+- Development Guide: docs/development-guide.md
+- Docs Index: docs/README.md
+- Deployment Guide: DEPLOYMENT.md
+- Frontend Guide: frontend/README.md
+- Backend Guide: backend/README.md
 
-- **Frontend**: Vercel (recommended for React apps)
-- **Backend**: Render (nice free tier for Python)
+## Project Structure
 
-**👉 See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions**
-
-Quick deploy summary:
-1. Push code to GitHub (yoga branch)
-2. Deploy frontend on Vercel (set `VITE_API_URL` env var)
-3. Deploy backend on Render (set `CORS_ORIGINS` env var)
-4. Test your live app!
-
----
-
-## �🗄️ Tech Stack
-
-- **Frontend**: React 18 + Vite + TailwindCSS + Framer Motion
-- **AI/ML**: `@mediapipe/pose` (browser inference, CDN)
-- **Backend**: FastAPI (Python) + Motor (async MongoDB)
-- **Database**: MongoDB
-- **Charts**: Recharts
-
----
-
-## 📁 Project Structure
-
-```
-├── frontend/
-│   ├── src/
-│   │   ├── components/   # PoseCamera, FeedbackPanel, ScoreMeter, Navbar, PoseGuide
-│   │   ├── pages/        # Landing, PoseSelect, LiveSession, Dashboard
-│   │   └── utils/        # idealPoses, angleCalculator, poseEvaluator, poseDetector
-│   └── vite.config.js
-│
-└── backend/
-    ├── main.py
-    ├── routes/           # pose.py, session.py
-    ├── models/           # schemas.py
-    ├── db/               # database.py
-    └── utils/            # angle_utils.py
+```text
+Yoga Posture Correction using Computer Vision/
+    backend/
+        main.py
+        routes/
+        models/
+        db/
+        utils/
+    frontend/
+        src/
+            components/
+            pages/
+            utils/
+    docs/
+        setup-guide.md
+        architecture.md
+        algorithm.md
+        api-reference.md
+        troubleshooting.md
 ```
 
----
+## Deployment
 
-*"योगश्चित्तवृत्तिनिरोधः" — Yoga is the cessation of the fluctuations of the mind.*
+Recommended production split:
+
+- Frontend on Vercel
+- Backend on Render
+
+See DEPLOYMENT.md for complete, step-by-step deployment instructions.
+
+## Notes
+
+- MongoDB is optional for development. The frontend still keeps session data in local storage.
+- If backend persistence is required, verify API payload field naming against backend schema in docs/api-reference.md.
+

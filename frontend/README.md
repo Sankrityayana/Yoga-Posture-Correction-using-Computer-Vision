@@ -1,16 +1,77 @@
-# React + Vite
+# Frontend Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This frontend is a React + Vite application that runs pose detection fully in the browser using MediaPipe Pose.
 
-Currently, two official plugins are available:
+## Responsibilities
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Manage user flows: landing, pose selection, live session, dashboard.
+- Capture webcam frames and run pose inference locally.
+- Evaluate posture against pose rules and render feedback.
+- Save session summaries to local storage.
+- Attempt backend sync for persisted history.
 
-## React Compiler
+## Folder Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+frontend/
+	src/
+		components/
+			PoseCamera.jsx
+			PoseGuide.jsx
+			FeedbackPanel.jsx
+			ScoreMeter.jsx
+			Navbar.jsx
+		pages/
+			Landing.jsx
+			PoseSelect.jsx
+			LiveSession.jsx
+			Dashboard.jsx
+		utils/
+			poseDetector.js
+			angleCalculator.js
+			poseEvaluator.js
+			idealPoses.js
+```
 
-## Expanding the ESLint configuration
+## Environment Variables
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Create frontend/.env:
+
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+For production, set VITE_API_URL to your backend URL in Vercel project settings.
+
+## Run Locally
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+cd frontend
+npm run build
+```
+
+The output is generated in frontend/dist.
+
+## Key Runtime Flow
+
+1. User chooses an asana.
+2. LiveSession starts the camera.
+3. PoseCamera streams frames to MediaPipe.
+4. poseEvaluator computes score and top corrections.
+5. UI updates score meter, chart, and feedback.
+6. On session end, summary is saved locally and posted to backend.
+
+## Important Notes
+
+- The webcam stream is not uploaded to the backend.
+- If backend is unavailable, core experience still works due to local-only fallback.
+- If you change response contracts, update docs/api-reference.md and backend schemas together.
+

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import PoseCamera from '../components/PoseCamera.jsx';
+import PoseReference from '../components/PoseReference.jsx';
 import FeedbackPanel from '../components/FeedbackPanel.jsx';
 import ScoreMeter from '../components/ScoreMeter.jsx';
 import PoseGuide from '../components/PoseGuide.jsx';
@@ -143,9 +144,9 @@ export default function LiveSession() {
           )}
         </AnimatePresence>
 
-        {/* Main layout: Camera left, Controls right */}
-        <div className="grid lg:grid-cols-5 gap-5">
-          {/* Camera (3/5) */}
+        {/* Main layout: Camera left, Reference middle, Controls right */}
+        <div className="grid lg:grid-cols-6 gap-4">
+          {/* Camera (3/6) */}
           <div className="lg:col-span-3 space-y-4">
             <PoseCamera
               poseDefinition={pose}
@@ -175,7 +176,12 @@ export default function LiveSession() {
             )}
           </div>
 
-          {/* Right Panel (2/5) */}
+          {/* Reference Pose (1/6) */}
+          <div className="lg:col-span-1">
+            <PoseReference pose={pose} />
+          </div>
+
+          {/* Right Panel (2/6) */}
           <div className="lg:col-span-2 space-y-4">
             {/* Score Meter */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col items-center">

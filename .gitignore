@@ -24,3 +24,8 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Keep example files tracked
+!.env.example
+!backend/.env.example
+!frontend/.env.example

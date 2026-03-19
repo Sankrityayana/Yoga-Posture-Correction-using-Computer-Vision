@@ -83,7 +83,24 @@ Webcam → MediaPipe (browser, CDN)
 
 ---
 
-## 🗄️ Tech Stack
+## � Deployment
+
+Ready to deploy to production?
+
+- **Frontend**: Vercel (recommended for React apps)
+- **Backend**: Render (nice free tier for Python)
+
+**👉 See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions**
+
+Quick deploy summary:
+1. Push code to GitHub (yoga branch)
+2. Deploy frontend on Vercel (set `VITE_API_URL` env var)
+3. Deploy backend on Render (set `CORS_ORIGINS` env var)
+4. Test your live app!
+
+---
+
+## �🗄️ Tech Stack
 
 - **Frontend**: React 18 + Vite + TailwindCSS + Framer Motion
 - **AI/ML**: `@mediapipe/pose` (browser inference, CDN)

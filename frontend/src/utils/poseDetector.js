@@ -1,4 +1,4 @@
-import { Pose, POSE_CONNECTIONS } from '@mediapipe/pose';
+const Pose = window.Pose;
 
 let poseInstance = null;
 let onResultsCallback = null;
@@ -42,7 +42,7 @@ export function closePoseDetector() {
   }
 }
 
-export { POSE_CONNECTIONS };
+
 
 /**
  * Draws a skeleton overlay on a canvas using MediaPipe landmarks.
@@ -59,7 +59,7 @@ export function drawSkeleton(ctx, landmarks, score, canvasWidth, canvasHeight) {
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
   // Define connections to draw
-  const connections = POSE_CONNECTIONS || [
+  const connections = [
     [11, 12], [11, 13], [13, 15], [12, 14], [14, 16],
     [11, 23], [12, 24], [23, 24], [23, 25], [24, 26],
     [25, 27], [26, 28], [27, 29], [28, 30], [29, 31], [30, 32],

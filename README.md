@@ -10,8 +10,13 @@ A real-time AI yoga coach that uses your webcam and MediaPipe to detect body key
 
 ### Frontend (React + Vite + MediaPipe)
 
+1. Set up your environment variables:
 ```bash
 cd frontend
+cp .env.example .env
+```
+2. Install and run:
+```bash
 npm install
 npm run dev
 ```
@@ -22,7 +27,12 @@ Open: **http://localhost:5173**
 ```bash
 cd backend
 pip install -r requirements.txt
+
+# For Development:
 uvicorn main:app --reload --port 8000
+
+# For Production:
+gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
 ```
 API Docs: **http://localhost:8000/docs**
 
@@ -73,7 +83,24 @@ Webcam → MediaPipe (browser, CDN)
 
 ---
 
-## 🗄️ Tech Stack
+## � Deployment
+
+Ready to deploy to production?
+
+- **Frontend**: Vercel (recommended for React apps)
+- **Backend**: Render (nice free tier for Python)
+
+**👉 See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions**
+
+Quick deploy summary:
+1. Push code to GitHub (yoga branch)
+2. Deploy frontend on Vercel (set `VITE_API_URL` env var)
+3. Deploy backend on Render (set `CORS_ORIGINS` env var)
+4. Test your live app!
+
+---
+
+## �🗄️ Tech Stack
 
 - **Frontend**: React 18 + Vite + TailwindCSS + Framer Motion
 - **AI/ML**: `@mediapipe/pose` (browser inference, CDN)

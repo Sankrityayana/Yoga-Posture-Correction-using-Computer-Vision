@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: yoga-posture-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn backend.main:app --worker-class=uvicorn.workers.UvicornWorker --timeout=120 --bind 0.0.0.0:$PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: CORS_ORIGINS
+        value: https://yoga-posture-frontend.vercel.app
+        sync: false
+
+  - type: static
+    name: yoga-posture-frontend
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://yoga-posture-backend.onrender.com
+        sync: false

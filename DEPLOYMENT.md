@@ -40,7 +40,8 @@ Ensure these files are in your repo (already created):
 Go to your service → Environment:
 ```
 CORS_ORIGINS=https://your-frontend-url.vercel.app
-MONGODB_URI=your_mongodb_connection_string (if using MongoDB)
+MONGO_URL=your_mongodb_connection_string (if using MongoDB)
+DB_NAME=yoga_posture_db
 ```
 
 #### Step 5: Deploy
@@ -167,7 +168,7 @@ Visit: https://yoga-posture-backend.onrender.com/docs
 1. Go to [mongodb.com/cloud](https://www.mongodb.com/cloud/atlas)
 2. Create free cluster
 3. Get connection string: `mongodb+srv://user:pass@cluster.mongodb.net/yoga_db`
-4. Add to Render environment variables as `MONGODB_URI`
+4. Add to Render environment variables as `MONGO_URL`
 
 ### Option B: Local MongoDB
 For testing only - not recommended for production
@@ -184,7 +185,8 @@ VITE_API_URL=https://yoga-posture-backend.onrender.com
 ### Backend (Render Dashboard)
 ```
 CORS_ORIGINS=https://yoga-posture-frontend.vercel.app
-MONGODB_URI=mongodb+srv://...
+MONGO_URL=mongodb+srv://...
+DB_NAME=yoga_posture_db
 ENVIRONMENT=production
 ```
 

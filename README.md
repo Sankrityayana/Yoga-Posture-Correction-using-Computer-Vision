@@ -10,8 +10,13 @@ A real-time AI yoga coach that uses your webcam and MediaPipe to detect body key
 
 ### Frontend (React + Vite + MediaPipe)
 
+1. Set up your environment variables:
 ```bash
 cd frontend
+cp .env.example .env
+```
+2. Install and run:
+```bash
 npm install
 npm run dev
 ```
@@ -22,7 +27,12 @@ Open: **http://localhost:5173**
 ```bash
 cd backend
 pip install -r requirements.txt
+
+# For Development:
 uvicorn main:app --reload --port 8000
+
+# For Production:
+gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
 ```
 API Docs: **http://localhost:8000/docs**
 

@@ -3,14 +3,17 @@
 Sankrityayana implements a minimalist FastAPI backend for telemetry storage. Below is the active routing table.
 
 ## Base URL
+
 The backend standard port in development is `http://localhost:8000`. This should map to `VITE_API_URL` on the frontend.
 
 ---
 
 ### `POST /save-session`
+
 Saves a completed yoga session to the database.
 
 **Request Body (JSON):**
+
 ```json
 {
   "asana_name": "string",
@@ -22,6 +25,7 @@ Saves a completed yoga session to the database.
 ```
 
 **Response (200 OK):**
+
 ```json
 {
   "status": "success",
@@ -32,9 +36,11 @@ Saves a completed yoga session to the database.
 ---
 
 ### `GET /history`
+
 Retrieves past yoga sessions for the user dashboard.
 
 **Response (200 OK):**
+
 ```json
 [
   {
@@ -48,6 +54,7 @@ Retrieves past yoga sessions for the user dashboard.
 ```
 
 ## Global Error Handling
+
 The backend is enclosed in a global middleware exception interceptor. Any uncaught Python exception (`500 Internal Server Error`) gracefully returns a standardized JSON structure ensuring frontend integrations never crash blindly:
 
 ```json

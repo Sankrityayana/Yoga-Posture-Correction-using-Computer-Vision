@@ -80,7 +80,7 @@ API Docs: **<http://localhost:8000/docs>**
 
 ## 🏗️ Architecture
 
-```
+```text
 Webcam → MediaPipe (browser, CDN)
          ↓ 33 Keypoints
          ↓ Angle Calculation (dot-product)
@@ -122,7 +122,7 @@ Quick deploy summary:
 
 ## 📁 Project Structure
 
-```
+```text
 ├── frontend/
 │   ├── src/
 │   │   ├── components/   # PoseCamera, FeedbackPanel, ScoreMeter, Navbar, PoseGuide

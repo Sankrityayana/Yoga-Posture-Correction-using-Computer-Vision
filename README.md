@@ -11,16 +11,22 @@ A real-time AI yoga coach that uses your webcam and MediaPipe to detect body key
 ### Frontend (React + Vite + MediaPipe)
 
 1. Set up your environment variables:
+
 ```bash
 cd frontend
 cp .env.example .env
+
 ```
-2. Install and run:
+
+1. Install and run:
+
 ```bash
 npm install
 npm run dev
+
 ```
-Open: **http://localhost:5173**
+
+Open: **<http://localhost:5173>**
 
 ### Backend (FastAPI + MongoDB)
 
@@ -34,7 +40,8 @@ uvicorn main:app --reload --port 8000
 # For Production:
 gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
 ```
-API Docs: **http://localhost:8000/docs**
+
+API Docs: **<http://localhost:8000/docs>**
 
 > **Note**: MongoDB is optional. Sessions are saved to localStorage even without the backend.
 
@@ -44,6 +51,7 @@ API Docs: **http://localhost:8000/docs**
 
 | Feature | Description |
 |---------|-------------|
+
 | 🎯 Real-time Detection | MediaPipe tracks 33 body keypoints at 30fps |
 | 🦴 Skeleton Overlay | Color-coded skeleton drawn on canvas |
 | 📐 Angle Analysis | Joint angles computed via dot-product math |
@@ -93,6 +101,7 @@ Ready to deploy to production?
 **👉 See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions**
 
 Quick deploy summary:
+
 1. Push code to GitHub (yoga branch)
 2. Deploy frontend on Vercel (set `VITE_API_URL` env var)
 3. Deploy backend on Render (set `CORS_ORIGINS` env var)

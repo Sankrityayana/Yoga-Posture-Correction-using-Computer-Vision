@@ -1,14 +1,46 @@
-# 🪷 Sankrityayana — AI Yoga Posture Correction
+# Sankrityayana - AI Yoga Posture Correction
 
-> **Chanakya IKS Software Hackathon** · Computer Vision + Indian Knowledge Systems
+Sankrityayana is a real-time yoga posture assistant built for the Chanakya IKS Software Hackathon. It combines browser-side computer vision with rule-based pose scoring to give immediate correction feedback while preserving user privacy.
 
-A real-time AI yoga coach that uses your webcam and MediaPipe to detect body keypoints, calculate joint angles, and give instant posture corrections — based on classical yoga principles.
+The webcam stream is processed in the browser using MediaPipe Pose. The backend is lightweight and handles optional analysis and session persistence.
 
----
+## What This Project Does
 
-## 🚀 Quick Start
+- Tracks body landmarks in real time from webcam input.
+- Evaluates selected asanas using configurable joint-angle rules.
+- Displays score, pose quality, and corrective feedback instantly.
+- Stores session summaries in local storage and optionally in MongoDB via FastAPI.
 
-### Frontend (React + Vite + MediaPipe)
+## Main Features
+
+- Real-time pose detection with MediaPipe Pose.
+- Weighted 0-100 scoring model with per-joint tolerance.
+- Feedback panel with top actionable corrections.
+- Session timer, best score, average score, and score history chart.
+- Dashboard view for session history.
+- Sanskrit and English pose metadata with guided cues.
+
+## Supported Asanas
+
+- Tadasana (Mountain Pose)
+- Trikonasana (Triangle Pose)
+- Vrikshasana (Tree Pose)
+- Virabhadrasana I (Warrior I)
+- Virabhadrasana II (Warrior II)
+- Adho Mukha Svanasana (Downward Dog)
+- Bhujangasana (Cobra Pose)
+- Balasana (Child's Pose)
+
+## Tech Stack
+
+- Frontend: React, Vite, Tailwind CSS, Framer Motion
+- CV Runtime: MediaPipe Pose (browser)
+- Backend: FastAPI, Pydantic, Motor, Uvicorn/Gunicorn
+- Database: MongoDB (optional)
+
+## Quick Start
+
+### 1. Frontend
 
 1. Set up your environment variables:
 
@@ -28,17 +60,16 @@ npm run dev
 
 Open: **<http://localhost:5173>**
 
-### Backend (FastAPI + MongoDB)
+Frontend URL: http://localhost:5173
+
+### 2. Backend
 
 ```bash
 cd backend
+python -m venv .venv_fresh
+.venv_fresh\Scripts\activate
 pip install -r requirements.txt
-
-# For Development:
 uvicorn main:app --reload --port 8000
-
-# For Production:
-gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
 ```
 
 API Docs: **<http://localhost:8000/docs>**
@@ -122,13 +153,10 @@ Quick deploy summary:
 
 ## �🗄️ Tech Stack
 
-- **Frontend**: React 18 + Vite + TailwindCSS + Framer Motion
-- **AI/ML**: `@mediapipe/pose` (browser inference, CDN)
-- **Backend**: FastAPI (Python) + Motor (async MongoDB)
-- **Database**: MongoDB
-- **Charts**: Recharts
+Recommended production split:
 
----
+- Frontend on Vercel
+- Backend on Render
 
 ## 📁 Project Structure
 
@@ -148,6 +176,7 @@ Quick deploy summary:
     └── utils/            # angle_utils.py
 ```
 
----
+## Notes
 
-*"योगश्चित्तवृत्तिनिरोधः" — Yoga is the cessation of the fluctuations of the mind.*
+- MongoDB is optional for development. The frontend still keeps session data in local storage.
+- If backend persistence is required, verify API payload field naming against backend schema in docs/api-reference.md.

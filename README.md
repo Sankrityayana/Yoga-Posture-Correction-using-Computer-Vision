@@ -112,4 +112,3 @@ See DEPLOYMENT.md for complete, step-by-step deployment instructions.
 
 - MongoDB is optional for development. The frontend still keeps session data in local storage.
 - If backend persistence is required, verify API payload field naming against backend schema in docs/api-reference.md.
-

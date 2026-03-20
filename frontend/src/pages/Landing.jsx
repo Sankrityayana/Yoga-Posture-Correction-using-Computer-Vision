@@ -104,7 +104,7 @@ export default function Landing() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { value: '33', label: 'Body Keypoints' },
-              { value: '8', label: 'Yoga Asanas' },
+              { value: '18', label: 'Yoga Asanas' },
               { value: '30fps', label: 'Realtime Analysis' },
               { value: '0–100', label: 'Pose Score' },
             ].map((stat) => (
@@ -152,7 +152,7 @@ export default function Landing() {
           <p className="text-white/40 mb-12">Four simple steps to perfect your asana</p>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: '01', icon: '🎯', label: 'Choose Pose', desc: 'Select from 8 classical asanas' },
+              { step: '01', icon: '🎯', label: 'Choose Pose', desc: 'Select from 18 classical asanas' },
               { step: '02', icon: '📸', label: 'Open Webcam', desc: 'AI detects your body instantly' },
               { step: '03', icon: '🦴', label: 'Track Joints', desc: '33 keypoints analyzed in real-time' },
               { step: '04', icon: '✅', label: 'Get Score', desc: 'Instant corrections + progress saved' },

@@ -62,7 +62,7 @@ API Docs: **<http://localhost:8000/docs>**
 
 ---
 
-## 🧘 Supported Asanas (8 Poses)
+## 🧘 Supported Asanas (18 Poses)
 
 | Sanskrit | English | Difficulty |
 |----------|---------|------------|
@@ -75,6 +75,16 @@ API Docs: **<http://localhost:8000/docs>**
 | अधोमुखश्वानासन | Downward Dog | Beginner |
 | भुजङ्गासन | Bhujangasana (Cobra) | Beginner |
 | बालासन | Balasana (Child's) | Beginner |
+| उत्कटासन | Utkatasana (Chair) | Beginner |
+| चतुरङ्गदण्डासन | Chaturanga Dandasana (Four-Limbed Staff) | Intermediate |
+| ऊर्ध्वमुखश्वानासन | Urdhva Mukha Svanasana (Upward Dog) | Beginner |
+| नावासन | Navasana (Boat) | Intermediate |
+| पश्चिमोत्तानासन | Paschimottanasana (Seated Forward Bend) | Beginner |
+| सेतुबन्धसर्वाङ्गासन | Setu Bandhasana (Bridge) | Beginner |
+| अञ्जनेयासन | Anjaneyasana (Crescent Lunge) | Beginner |
+| मालासन | Malasana (Garland) | Beginner |
+| अर्धमत्स्येन्द्रासन | Ardha Matsyendrasana (Half Twist) | Intermediate |
+| उत्थितपार्श्वकोणासन | Utthita Parsvakonasana (Extended Side Angle) | Intermediate |
 
 ---
 

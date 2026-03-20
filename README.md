@@ -66,6 +66,7 @@ API Docs: **<http://localhost:8000/docs>**
 
 | Sanskrit | English | Difficulty |
 |----------|---------|------------|
+
 | ताडासन | Tadasana (Mountain) | Beginner |
 | त्रिकोणासन | Trikonasana (Triangle) | Beginner |
 | वृक्षासन | Vrikshasana (Tree) | Beginner |

@@ -144,9 +144,9 @@ export default function LiveSession() {
           )}
         </AnimatePresence>
 
-        {/* Main layout: Camera left, Reference middle, Controls right */}
-        <div className="grid lg:grid-cols-6 gap-4">
-          {/* Camera (3/6) */}
+        {/* Main layout: Camera left, Controls right */}
+        <div className="grid lg:grid-cols-5 gap-4">
+          {/* Camera (3/5) */}
           <div className="lg:col-span-3 space-y-4">
             <PoseCamera
               poseDefinition={pose}
@@ -176,12 +176,7 @@ export default function LiveSession() {
             )}
           </div>
 
-          {/* Reference Pose (1/6) */}
-          <div className="lg:col-span-1">
-            <PoseReference pose={pose} />
-          </div>
-
-          {/* Right Panel (2/6) */}
+          {/* Right Panel (2/5) */}
           <div className="lg:col-span-2 space-y-4">
             {/* Score Meter */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col items-center">
@@ -210,6 +205,11 @@ export default function LiveSession() {
             {/* Pose Guide */}
             <PoseGuide pose={pose} />
           </div>
+        </div>
+
+        {/* YouTube Tutorial — full width at the bottom */}
+        <div className="mt-6">
+          <PoseReference pose={pose} />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
-/**
+﻿/**
  * Ideal angle definitions for each yoga asana.
- * Each joint has: ideal angle (degrees), tolerance (±), feedback messages, weight.
+ * Each joint has: ideal angle (degrees), tolerance (Â±), feedback messages, weight.
  *
  * Keypoint indices (MediaPipe Pose):
  * 0=nose, 11=left_shoulder, 12=right_shoulder,
@@ -13,10 +13,10 @@ export const POSES = {
   tadasana: {
     id: 'tadasana',
     name: 'Tadasana',
-    sanskrit: 'ताडासन',
+    sanskrit: 'à¤¤à¤¾à¤¡à¤¾à¤¸à¤¨',
     english: 'Mountain Pose',
     difficulty: 'Beginner',
-    description: 'The foundation of all standing poses — align your body from head to toe.',
+    description: 'The foundation of all standing poses â€” align your body from head to toe.',
     benefits: ['Improves posture', 'Strengthens thighs', 'Reduces flat feet'],
     guidance: [
       'Stand with feet together',
@@ -24,8 +24,7 @@ export const POSES = {
       'Arms at sides, palms forward',
       'Crown of head rising',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/qW1MLSX0qsU',
+    youtubeUrl: 'https://www.youtube.com/embed/CTrRX7DcBSA?si=a-QtVJOdz6hG-kJr',
     color: '#f97316',
     joints: [
       {
@@ -34,7 +33,7 @@ export const POSES = {
         ideal: 175,
         tolerance: 10,
         weight: 1.5,
-        feedbackHigh: 'Straighten your left leg — avoid bending the knee',
+        feedbackHigh: 'Straighten your left leg â€” avoid bending the knee',
         feedbackLow: 'Release over-extension in your left knee',
       },
       {
@@ -43,7 +42,7 @@ export const POSES = {
         ideal: 175,
         tolerance: 10,
         weight: 1.5,
-        feedbackHigh: 'Straighten your right leg — avoid bending the knee',
+        feedbackHigh: 'Straighten your right leg â€” avoid bending the knee',
         feedbackLow: 'Release over-extension in your right knee',
       },
       {
@@ -53,7 +52,7 @@ export const POSES = {
         tolerance: 15,
         weight: 1.0,
         feedbackHigh: 'Extend your left arm fully alongside your body',
-        feedbackLow: 'Relax your left arm — avoid tensing the elbow',
+        feedbackLow: 'Relax your left arm â€” avoid tensing the elbow',
       },
       {
         name: 'Right Elbow',
@@ -62,7 +61,7 @@ export const POSES = {
         tolerance: 15,
         weight: 1.0,
         feedbackHigh: 'Extend your right arm fully alongside your body',
-        feedbackLow: 'Relax your right arm — avoid tensing the elbow',
+        feedbackLow: 'Relax your right arm â€” avoid tensing the elbow',
       },
       {
         name: 'Left Hip',
@@ -70,8 +69,8 @@ export const POSES = {
         ideal: 175,
         tolerance: 10,
         weight: 2.0,
-        feedbackHigh: 'Stand tall — avoid bending at the hip',
-        feedbackLow: 'Do not lean backward — keep hips neutral',
+        feedbackHigh: 'Stand tall â€” avoid bending at the hip',
+        feedbackLow: 'Do not lean backward â€” keep hips neutral',
       },
       {
         name: 'Right Hip',
@@ -79,8 +78,8 @@ export const POSES = {
         ideal: 175,
         tolerance: 10,
         weight: 2.0,
-        feedbackHigh: 'Stand tall — avoid bending at the hip',
-        feedbackLow: 'Do not lean backward — keep hips neutral',
+        feedbackHigh: 'Stand tall â€” avoid bending at the hip',
+        feedbackLow: 'Do not lean backward â€” keep hips neutral',
       },
     ],
   },
@@ -88,20 +87,19 @@ export const POSES = {
   trikonasana: {
     id: 'trikonasana',
     name: 'Trikonasana',
-    sanskrit: 'त्रिकोणासन',
+    sanskrit: 'à¤¤à¥à¤°à¤¿à¤•à¥‹à¤£à¤¾à¤¸à¤¨',
     english: 'Triangle Pose',
     difficulty: 'Beginner',
     description: 'Open your hips and chest while lengthening the sides of your torso.',
     benefits: ['Stretches hips & thighs', 'Opens chest', 'Improves balance'],
     guidance: [
       'Feet 3-4 feet apart',
-      'Right foot out 90°, left foot in 15°',
+      'Right foot out 90Â°, left foot in 15Â°',
       'Extend arms parallel to floor',
       'Reach right hand to shin/ankle',
       'Left arm points to sky',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/X-EIlBkiazA',
+    youtubeUrl: 'https://www.youtube.com/embed/0nGBmqMeA40',
     color: '#6d28d9',
     joints: [
       {
@@ -110,7 +108,7 @@ export const POSES = {
         ideal: 175,
         tolerance: 10,
         weight: 2.0,
-        feedbackHigh: 'Keep your front leg straight — do not bend the knee',
+        feedbackHigh: 'Keep your front leg straight â€” do not bend the knee',
         feedbackLow: 'Ease up on locking the front knee',
       },
       {
@@ -120,7 +118,7 @@ export const POSES = {
         tolerance: 10,
         weight: 2.0,
         feedbackHigh: 'Straighten your back leg fully',
-        feedbackLow: 'Relax the back leg — do not over-extend',
+        feedbackLow: 'Relax the back leg â€” do not over-extend',
       },
       {
         name: 'Right Elbow',
@@ -128,7 +126,7 @@ export const POSES = {
         ideal: 170,
         tolerance: 15,
         weight: 1.0,
-        feedbackHigh: 'Keep your upper arm straight — extend to the sky',
+        feedbackHigh: 'Keep your upper arm straight â€” extend to the sky',
         feedbackLow: 'Relax the upper arm',
       },
       {
@@ -146,8 +144,8 @@ export const POSES = {
         ideal: 100,
         tolerance: 15,
         weight: 2.5,
-        feedbackHigh: 'Tilt from your hip — do not crunch the side',
-        feedbackLow: 'Open your hips more — rotate them outward',
+        feedbackHigh: 'Tilt from your hip â€” do not crunch the side',
+        feedbackLow: 'Open your hips more â€” rotate them outward',
       },
     ],
   },
@@ -155,10 +153,10 @@ export const POSES = {
   vrikshasana: {
     id: 'vrikshasana',
     name: 'Vrikshasana',
-    sanskrit: 'वृक्षासन',
+    sanskrit: 'à¤µà¥ƒà¤•à¥à¤·à¤¾à¤¸à¤¨',
     english: 'Tree Pose',
     difficulty: 'Beginner',
-    description: 'Balance on one leg like a rooted tree — steady mind, steady body.',
+    description: 'Balance on one leg like a rooted tree â€” steady mind, steady body.',
     benefits: ['Improves balance', 'Strengthens ankles', 'Calms the mind'],
     guidance: [
       'Stand on left leg firmly',
@@ -167,8 +165,7 @@ export const POSES = {
       'Raise arms overhead',
       'Focus gaze on one point',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/tVWp1Fk7s0A',
+    youtubeUrl: 'https://www.youtube.com/embed/wdln9qWYloU',
     color: '#0d9488',
     joints: [
       {
@@ -178,7 +175,7 @@ export const POSES = {
         tolerance: 10,
         weight: 2.5,
         feedbackHigh: 'Keep your standing leg straight and strong',
-        feedbackLow: 'Micro-bend the standing knee — do not lock it',
+        feedbackLow: 'Micro-bend the standing knee â€” do not lock it',
       },
       {
         name: 'Hip Alignment',
@@ -186,8 +183,8 @@ export const POSES = {
         ideal: 178,
         tolerance: 8,
         weight: 2.0,
-        feedbackHigh: 'Open your hip — square your hips forward',
-        feedbackLow: 'Do not lean — keep hips level',
+        feedbackHigh: 'Open your hip â€” square your hips forward',
+        feedbackLow: 'Do not lean â€” keep hips level',
       },
       {
         name: 'Left Shoulder',
@@ -195,8 +192,8 @@ export const POSES = {
         ideal: 160,
         tolerance: 20,
         weight: 1.5,
-        feedbackHigh: 'Raise your arms higher — palms together overhead',
-        feedbackLow: 'Relax the shoulders — do not shrug',
+        feedbackHigh: 'Raise your arms higher â€” palms together overhead',
+        feedbackLow: 'Relax the shoulders â€” do not shrug',
       },
       {
         name: 'Right Shoulder',
@@ -204,8 +201,8 @@ export const POSES = {
         ideal: 160,
         tolerance: 20,
         weight: 1.5,
-        feedbackHigh: 'Raise your arms higher — reach to the sky',
-        feedbackLow: 'Relax the shoulders — do not shrug',
+        feedbackHigh: 'Raise your arms higher â€” reach to the sky',
+        feedbackLow: 'Relax the shoulders â€” do not shrug',
       },
     ],
   },
@@ -213,20 +210,19 @@ export const POSES = {
   warrior1: {
     id: 'warrior1',
     name: 'Virabhadrasana I',
-    sanskrit: 'वीरभद्रासन १',
+    sanskrit: 'à¤µà¥€à¤°à¤­à¤¦à¥à¤°à¤¾à¤¸à¤¨ à¥§',
     english: 'Warrior I',
     difficulty: 'Intermediate',
-    description: 'Channel the spirit of the warrior — strength, focus, and grace.',
+    description: 'Channel the spirit of the warrior â€” strength, focus, and grace.',
     benefits: ['Strengthens legs', 'Opens chest', 'Builds stamina'],
     guidance: [
       'Step right foot forward 4 feet',
-      'Back heel at 45°',
+      'Back heel at 45Â°',
       'Bend right knee over ankle',
       'Raise arms overhead',
       'Look up between hands',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/LJcKxJKXMxg',
+    youtubeUrl: 'https://www.youtube.com/embed/XKmNH6IVWjU',
     color: '#e11d48',
     joints: [
       {
@@ -235,8 +231,8 @@ export const POSES = {
         ideal: 90,
         tolerance: 15,
         weight: 2.5,
-        feedbackHigh: 'Bend your front knee deeper — aim for 90°',
-        feedbackLow: 'Bend the front knee less — keep it over the ankle',
+        feedbackHigh: 'Bend your front knee deeper â€” aim for 90Â°',
+        feedbackLow: 'Bend the front knee less â€” keep it over the ankle',
       },
       {
         name: 'Back Knee',
@@ -244,7 +240,7 @@ export const POSES = {
         ideal: 170,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Straighten your back leg — press the heel down',
+        feedbackHigh: 'Straighten your back leg â€” press the heel down',
         feedbackLow: 'Do not over-extend the back leg',
       },
       {
@@ -253,8 +249,8 @@ export const POSES = {
         ideal: 160,
         tolerance: 20,
         weight: 1.5,
-        feedbackHigh: 'Raise your arms high — reach for the sky',
-        feedbackLow: 'Relax arms — avoid tensing shoulders',
+        feedbackHigh: 'Raise your arms high â€” reach for the sky',
+        feedbackLow: 'Relax arms â€” avoid tensing shoulders',
       },
       {
         name: 'Spine',
@@ -262,7 +258,7 @@ export const POSES = {
         ideal: 150,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Open your chest — lift your torso tall',
+        feedbackHigh: 'Open your chest â€” lift your torso tall',
         feedbackLow: 'Do not lean back excessively',
       },
     ],
@@ -271,20 +267,19 @@ export const POSES = {
   warrior2: {
     id: 'warrior2',
     name: 'Virabhadrasana II',
-    sanskrit: 'वीरभद्रासन २',
+    sanskrit: 'à¤µà¥€à¤°à¤­à¤¦à¥à¤°à¤¾à¤¸à¤¨ à¥¨',
     english: 'Warrior II',
     difficulty: 'Intermediate',
-    description: 'Expand your presence — arms wide, gaze fierce, stance powerful.',
+    description: 'Expand your presence â€” arms wide, gaze fierce, stance powerful.',
     benefits: ['Strengthens legs & arms', 'Opens hips', 'Improves focus'],
     guidance: [
       'Feet 4-5 feet apart',
-      'Right foot out 90°, left foot in slightly',
+      'Right foot out 90Â°, left foot in slightly',
       'Bend right knee over ankle',
       'Arms parallel to floor',
       'Gaze over right fingertips',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/2S33F4kQrhs',
+    youtubeUrl: 'https://www.youtube.com/embed/MCaCC1C4mHQ',
     color: '#d97706',
     joints: [
       {
@@ -293,7 +288,7 @@ export const POSES = {
         ideal: 90,
         tolerance: 15,
         weight: 2.5,
-        feedbackHigh: 'Bend your front knee to 90° — align with ankle',
+        feedbackHigh: 'Bend your front knee to 90Â° â€” align with ankle',
         feedbackLow: 'Straighten the front knee slightly',
       },
       {
@@ -311,7 +306,7 @@ export const POSES = {
         ideal: 170,
         tolerance: 15,
         weight: 1.5,
-        feedbackHigh: 'Extend your left arm fully — reach out to the left',
+        feedbackHigh: 'Extend your left arm fully â€” reach out to the left',
         feedbackLow: 'Relax your elbow',
       },
       {
@@ -320,7 +315,7 @@ export const POSES = {
         ideal: 170,
         tolerance: 15,
         weight: 1.5,
-        feedbackHigh: 'Extend your right arm fully — reach to the right',
+        feedbackHigh: 'Extend your right arm fully â€” reach to the right',
         feedbackLow: 'Relax your elbow',
       },
       {
@@ -329,7 +324,7 @@ export const POSES = {
         ideal: 155,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Open your hips wider — rotate outward',
+        feedbackHigh: 'Open your hips wider â€” rotate outward',
         feedbackLow: 'Bring hips slightly more forward',
       },
     ],
@@ -338,10 +333,10 @@ export const POSES = {
   downwarddog: {
     id: 'downwarddog',
     name: 'Adho Mukha Svanasana',
-    sanskrit: 'अधोमुखश्वानासन',
+    sanskrit: 'à¤…à¤§à¥‹à¤®à¥à¤–à¤¶à¥à¤µà¤¾à¤¨à¤¾à¤¸à¤¨',
     english: 'Downward Dog',
     difficulty: 'Beginner',
-    description: 'Inverted V-shape — a full body stretch and energizing reset.',
+    description: 'Inverted V-shape â€” a full body stretch and energizing reset.',
     benefits: ['Stretches hamstrings', 'Strengthens arms', 'Calms the brain'],
     guidance: [
       'Start on hands and knees',
@@ -350,8 +345,7 @@ export const POSES = {
       'Press heels toward floor',
       'Head between arms',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/FjMxaqKxjBg',
+    youtubeUrl: 'https://www.youtube.com/embed/EC7RGJ975iM',
     color: '#0891b2',
     joints: [
       {
@@ -360,7 +354,7 @@ export const POSES = {
         ideal: 165,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Straighten your arms fully — push the floor away',
+        feedbackHigh: 'Straighten your arms fully â€” push the floor away',
         feedbackLow: 'Ease the arm extension',
       },
       {
@@ -369,7 +363,7 @@ export const POSES = {
         ideal: 165,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Straighten your arms fully — push the floor away',
+        feedbackHigh: 'Straighten your arms fully â€” push the floor away',
         feedbackLow: 'Ease the arm extension',
       },
       {
@@ -378,7 +372,7 @@ export const POSES = {
         ideal: 170,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Straighten your left leg — press heel down',
+        feedbackHigh: 'Straighten your left leg â€” press heel down',
         feedbackLow: 'Micro-bend if hamstrings are tight',
       },
       {
@@ -387,7 +381,7 @@ export const POSES = {
         ideal: 170,
         tolerance: 15,
         weight: 2.0,
-        feedbackHigh: 'Straighten your right leg — press heel down',
+        feedbackHigh: 'Straighten your right leg â€” press heel down',
         feedbackLow: 'Micro-bend if hamstrings are tight',
       },
       {
@@ -396,7 +390,7 @@ export const POSES = {
         ideal: 60,
         tolerance: 15,
         weight: 3.0,
-        feedbackHigh: 'Push hips higher — create a sharp V shape',
+        feedbackHigh: 'Push hips higher â€” create a sharp V shape',
         feedbackLow: 'Lower your hips slightly',
       },
     ],
@@ -405,10 +399,10 @@ export const POSES = {
   bhujangasana: {
     id: 'bhujangasana',
     name: 'Bhujangasana',
-    sanskrit: 'भुजङ्गासन',
+    sanskrit: 'à¤­à¥à¤œà¤™à¥à¤—à¤¾à¤¸à¤¨',
     english: 'Cobra Pose',
     difficulty: 'Beginner',
-    description: 'Rise like a cobra — open the chest and strengthen the spine.',
+    description: 'Rise like a cobra â€” open the chest and strengthen the spine.',
     benefits: ['Opens chest', 'Strengthens spine', 'Reduces back pain'],
     guidance: [
       'Lie face down',
@@ -417,8 +411,7 @@ export const POSES = {
       'Roll shoulders back and down',
       'Keep hips on floor',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/s-16lMoHvMM',
+    youtubeUrl: 'https://www.youtube.com/embed/Z6U6PNBUQPY',
     color: '#7c3aed',
     joints: [
       {
@@ -427,8 +420,8 @@ export const POSES = {
         ideal: 140,
         tolerance: 20,
         weight: 2.0,
-        feedbackHigh: 'Straighten arms more — lift chest higher',
-        feedbackLow: 'Keep a slight bend in elbows — protect lower back',
+        feedbackHigh: 'Straighten arms more â€” lift chest higher',
+        feedbackLow: 'Keep a slight bend in elbows â€” protect lower back',
       },
       {
         name: 'Right Elbow',
@@ -436,7 +429,7 @@ export const POSES = {
         ideal: 140,
         tolerance: 20,
         weight: 2.0,
-        feedbackHigh: 'Straighten arms more — lift chest higher',
+        feedbackHigh: 'Straighten arms more â€” lift chest higher',
         feedbackLow: 'Keep a slight bend in elbows',
       },
       {
@@ -445,8 +438,8 @@ export const POSES = {
         ideal: 130,
         tolerance: 20,
         weight: 3.0,
-        feedbackHigh: 'Arch your back more — lift your chest to the sky',
-        feedbackLow: 'Do not over-arch — protect your lower back',
+        feedbackHigh: 'Arch your back more â€” lift your chest to the sky',
+        feedbackLow: 'Do not over-arch â€” protect your lower back',
       },
     ],
   },
@@ -454,10 +447,10 @@ export const POSES = {
   balasana: {
     id: 'balasana',
     name: 'Balasana',
-    sanskrit: 'बालासन',
+    sanskrit: 'à¤¬à¤¾à¤²à¤¾à¤¸à¤¨',
     english: "Child's Pose",
     difficulty: 'Beginner',
-    description: 'A restful pose of surrender — perfect for rest and reflection.',
+    description: 'A restful pose of surrender â€” perfect for rest and reflection.',
     benefits: ['Releases tension', 'Stretches hips', 'Calms the mind'],
     guidance: [
       'Kneel, toes together',
@@ -466,8 +459,7 @@ export const POSES = {
       'Forehead rests on mat',
       'Breathe deeply',
     ],
-    referenceImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-    youtubeUrl: 'https://www.youtube.com/embed/qKXLlzuVWFc',
+    youtubeUrl: 'https://www.youtube.com/embed/2MJGg-dUKh0',
     color: '#059669',
     joints: [
       {
@@ -476,7 +468,7 @@ export const POSES = {
         ideal: 40,
         tolerance: 20,
         weight: 2.5,
-        feedbackHigh: 'Fold deeper — sit your hips toward your heels',
+        feedbackHigh: 'Fold deeper â€” sit your hips toward your heels',
         feedbackLow: 'Ease up if knees or ankles are uncomfortable',
       },
       {
@@ -485,7 +477,7 @@ export const POSES = {
         ideal: 40,
         tolerance: 20,
         weight: 2.5,
-        feedbackHigh: 'Fold deeper — sit your hips toward your heels',
+        feedbackHigh: 'Fold deeper â€” sit your hips toward your heels',
         feedbackLow: 'Ease up if knees or ankles are uncomfortable',
       },
       {
@@ -494,8 +486,8 @@ export const POSES = {
         ideal: 170,
         tolerance: 20,
         weight: 1.5,
-        feedbackHigh: 'Reach your arms forward — stretch through fingertips',
-        feedbackLow: 'Relax the arms — do not strain',
+        feedbackHigh: 'Reach your arms forward â€” stretch through fingertips',
+        feedbackLow: 'Relax the arms â€” do not strain',
       },
     ],
   },

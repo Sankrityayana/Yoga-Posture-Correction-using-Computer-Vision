@@ -20,7 +20,7 @@ export default function PoseSelect() {
           </span>
           <h1 className="text-4xl font-bold text-white mb-3">Choose a Yoga Pose</h1>
           <p className="text-white/50">
-            Select from 8 classical asanas grounded in Indian tradition
+            Select from 18 classical asanas grounded in Indian tradition
           </p>
         </div>
 

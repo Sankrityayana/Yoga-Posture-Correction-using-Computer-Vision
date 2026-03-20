@@ -2,18 +2,27 @@
 
 This document explains how Sankrityayana computes posture quality from webcam landmarks.
 
-## 1) Landmark Input
+## 1. Landmark Extraction
 
-- Source: MediaPipe Pose
-- Output per frame: up to 33 landmarks
-- Landmark shape: x, y, z, visibility
-- Low-confidence points are ignored in drawing and scoring decisions.
+We utilize the **MediaPipe Pose Engine** which extracts 33 standardized body keypoints per video frame. Keypoints include nose, shoulders, elbows, wrists, hips, knees, and ankles.
+Each point returned contains `(x, y, z)` spatial coordinates and a visibility confidence threshold.
 
-## 2) Joint Angle Measurement
+## 2. Mathematical Foundation: The Angle Heuristic
+
+Our evaluation mechanism relies heavily on the geometric angles between joints rather than raw spatial positions. This makes the AI invariant to user scale (how close they are to the camera), bounding box cropping, and camera orientation.
+
+### Angle Calculation Formula
+
+To find the angle $ \theta $ at joint $B$ formed by the segments $AB$ and $BC$, we use the Arc Tangent algorithm:
 
 Each scored joint is defined by three landmark indices A-B-C where B is the vertex.
 
-For vectors:
+## 3. Heuristic Scoring
+
+For each configured Asana (e.g., Tadasana, Vrikshasana), defined critical angles are mapped:
+
+- **Tadasana (Mountain Pose):** Evaluates if the spine, knees, and ankles are fundamentally straight (180° variance checks).
+- **Vrikshasana (Tree Pose):** Computes the angle of the bent resting knee and the straight stabilizing leg, ensuring hands are raised symmetrically.
 
 $$
 \vec{BA} = A - B, \quad \vec{BC} = C - B
@@ -89,3 +98,11 @@ Only important landmarks are drawn for clarity.
 - Camera distance and person scale are handled better than pixel-distance heuristics
 - Performance depends on webcam quality, lighting, and side-view occlusion
 
+## 4. UI Skeleton Overlay
+
+The `poseDetector.js` module draws a connected skeleton tree using `canvas.getContext('2d')`.
+
+- Joints with `visibility < 0.3` are ignored to prevent skeleton flickering.
+- Confident posture (Score > 75) glows Green.
+- Warning posture (Score > 50) glows Orange.
+- Critical posture (Score < 50) glows Red.

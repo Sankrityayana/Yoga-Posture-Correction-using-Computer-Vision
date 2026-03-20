@@ -2,39 +2,17 @@
 
 Base URL (development): http://localhost:8000
 
-Interactive API docs: /docs
+## Base URL
+
+The backend standard port in development is `http://localhost:8000`. This should map to `VITE_API_URL` on the frontend.
 
 ## GET /
 
-Health-style root endpoint.
+### `POST /save-session`
 
-Response:
+Saves a completed yoga session to the database.
 
-```json
-{
-  "message": "Sankrityayana Yoga API is running",
-  "docs": "/docs"
-}
-```
-
-## GET /health
-
-Simple health check.
-
-Response:
-
-```json
-{
-  "status": "ok",
-  "service": "yoga-posture-correction"
-}
-```
-
-## POST /analyze-pose
-
-Secondary server-side evaluation endpoint (frontend mostly uses local evaluation).
-
-Request:
+**Request Body (JSON):**
 
 ```json
 {
@@ -45,7 +23,7 @@ Request:
 }
 ```
 
-Response:
+**Response (200 OK):**
 
 ```json
 {
@@ -68,9 +46,11 @@ Response:
 
 ## POST /save-session
 
-Persists completed session summary.
+### `GET /history`
 
-Expected request schema (snake_case):
+Retrieves past yoga sessions for the user dashboard.
+
+**Response (200 OK):**
 
 ```json
 {
@@ -83,7 +63,9 @@ Expected request schema (snake_case):
 }
 ```
 
-Successful response:
+## Global Error Handling
+
+The backend is enclosed in a global middleware exception interceptor. Any uncaught Python exception (`500 Internal Server Error`) gracefully returns a standardized JSON structure ensuring frontend integrations never crash blindly:
 
 ```json
 {

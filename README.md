@@ -42,12 +42,23 @@ The webcam stream is processed in the browser using MediaPipe Pose. The backend 
 
 ### 1. Frontend
 
+1. Set up your environment variables:
+
 ```bash
 cd frontend
 cp .env.example .env
+
+```
+
+1. Install and run:
+
+```bash
 npm install
 npm run dev
+
 ```
+
+Open: **<http://localhost:5173>**
 
 Frontend URL: http://localhost:5173
 
@@ -61,52 +72,109 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
-Backend URL: http://localhost:8000
+API Docs: **<http://localhost:8000/docs>**
 
-## Documentation Map
+> **Note**: MongoDB is optional. Sessions are saved to localStorage even without the backend.
 
-- Setup Guide: docs/setup-guide.md
-- Architecture: docs/architecture.md
-- Algorithm Details: docs/algorithm.md
-- API Reference: docs/api-reference.md
-- Troubleshooting: docs/troubleshooting.md
-- Development Guide: docs/development-guide.md
-- Docs Index: docs/README.md
-- Deployment Guide: DEPLOYMENT.md
-- Frontend Guide: frontend/README.md
-- Backend Guide: backend/README.md
+---
 
-## Project Structure
+## 🧘 Features
+
+| Feature | Description |
+|---------|-------------|
+
+| 🎯 Real-time Detection | MediaPipe tracks 33 body keypoints at 30fps |
+| 🦴 Skeleton Overlay | Color-coded skeleton drawn on canvas |
+| 📐 Angle Analysis | Joint angles computed via dot-product math |
+| 📊 Pose Score | Weighted 0–100 score per session |
+| 🔔 Instant Corrections | Specific feedback per joint |
+| 📈 Dashboard | History, best scores, session charts |
+| 🇮🇳 IKS Foundation | Sanskrit names + classical alignment rules |
+
+---
+
+## 🧘 Supported Asanas (18 Poses)
+
+| Sanskrit | English | Difficulty |
+|----------|---------|------------|
+
+| ताडासन | Tadasana (Mountain) | Beginner |
+| त्रिकोणासन | Trikonasana (Triangle) | Beginner |
+| वृक्षासन | Vrikshasana (Tree) | Beginner |
+| वीरभद्रासन १ | Warrior I | Intermediate |
+| वीरभद्रासन २ | Warrior II | Intermediate |
+| अधोमुखश्वानासन | Downward Dog | Beginner |
+| भुजङ्गासन | Bhujangasana (Cobra) | Beginner |
+| बालासन | Balasana (Child's) | Beginner |
+| उत्कटासन | Utkatasana (Chair) | Beginner |
+| चतुरङ्गदण्डासन | Chaturanga Dandasana (Four-Limbed Staff) | Intermediate |
+| ऊर्ध्वमुखश्वानासन | Urdhva Mukha Svanasana (Upward Dog) | Beginner |
+| नावासन | Navasana (Boat) | Intermediate |
+| पश्चिमोत्तानासन | Paschimottanasana (Seated Forward Bend) | Beginner |
+| सेतुबन्धसर्वाङ्गासन | Setu Bandhasana (Bridge) | Beginner |
+| अञ्जनेयासन | Anjaneyasana (Crescent Lunge) | Beginner |
+| मालासन | Malasana (Garland) | Beginner |
+| अर्धमत्स्येन्द्रासन | Ardha Matsyendrasana (Half Twist) | Intermediate |
+| उत्थितपार्श्वकोणासन | Utthita Parsvakonasana (Extended Side Angle) | Intermediate |
+
+---
+
+## 🏗️ Architecture
 
 ```text
-Yoga Posture Correction using Computer Vision/
-    backend/
-        main.py
-        routes/
-        models/
-        db/
-        utils/
-    frontend/
-        src/
-            components/
-            pages/
-            utils/
-    docs/
-        setup-guide.md
-        architecture.md
-        algorithm.md
-        api-reference.md
-        troubleshooting.md
+Webcam → MediaPipe (browser, CDN)
+         ↓ 33 Keypoints
+         ↓ Angle Calculation (dot-product)
+         ↓ Pose Evaluator (weighted scoring)
+         ↓ React UI (canvas overlay + feedback)
+         ↓ FastAPI (optional session storage)
+         ↓ MongoDB
 ```
 
-## Deployment
+---
+
+## � Deployment
+
+Ready to deploy to production?
+
+- **Frontend**: Vercel (recommended for React apps)
+- **Backend**: Render (nice free tier for Python)
+
+**👉 See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions**
+
+Quick deploy summary:
+
+1. Push code to GitHub (yoga branch)
+2. Deploy frontend on Vercel (set `VITE_API_URL` env var)
+3. Deploy backend on Render (set `CORS_ORIGINS` env var)
+4. Test your live app!
+
+---
+
+## �🗄️ Tech Stack
 
 Recommended production split:
 
 - Frontend on Vercel
 - Backend on Render
 
-See DEPLOYMENT.md for complete, step-by-step deployment instructions.
+## 📁 Project Structure
+
+```text
+├── frontend/
+│   ├── src/
+│   │   ├── components/   # PoseCamera, FeedbackPanel, ScoreMeter, Navbar, PoseGuide
+│   │   ├── pages/        # Landing, PoseSelect, LiveSession, Dashboard
+│   │   └── utils/        # idealPoses, angleCalculator, poseEvaluator, poseDetector
+│   └── vite.config.js
+│
+└── backend/
+    ├── main.py
+    ├── routes/           # pose.py, session.py
+    ├── models/           # schemas.py
+    ├── db/               # database.py
+    └── utils/            # angle_utils.py
+```
 
 ## Notes
 

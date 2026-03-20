@@ -234,7 +234,6 @@ ENVIRONMENT=production
 
 ## Cost Estimates
 
-
 - Vercel: Free tier 100GB bandwidth/month, paid plans from about $20/month.
 - Render: Free tier 750 hours/month web service, paid plans from about $12/month.
 - MongoDB Atlas: Free tier 512MB storage, paid plans from about $15/month.

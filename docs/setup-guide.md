@@ -2,21 +2,20 @@
 
 This guide covers local development setup for both frontend and backend.
 
-## Prerequisites
+## 1. Database Prerequisite
 
-- Node.js 18+ and npm
-- Python 3.10+
-- Webcam-enabled browser (Chrome/Edge recommended)
-- Optional: MongoDB (local or Atlas)
+- You need a MongoDB instance running locally on `mongodb://localhost:27017` or a cloud MongoDB Atlas string.
 
-## 1) Clone and Enter Project
+## 2. Frontend Setup (React/Vite)
+
+Open your terminal in the target `frontend` folder.
 
 ```bash
 git clone <repo-url>
 cd "Yoga Posture Correction using Computer Vision"
 ```
 
-## 2) Frontend Setup
+### Install Dependencies
 
 ```bash
 cd frontend
@@ -24,30 +23,50 @@ npm install
 cp .env.example .env
 ```
 
-Set frontend/.env:
+### Environment Configuration
 
-```env
-VITE_API_URL=http://localhost:8000
+Copy the `.env.example` into a local `.env` file to instruct Vite how to speak to the backend.
+
+```bash
+cp .env.example .env
 ```
 
-Run frontend:
+Ensure your `.env` contains:
+`VITE_API_URL="http://localhost:8000"`
+
+### Start the Server
 
 ```bash
 npm run dev
 ```
 
-Frontend runs at http://localhost:5173.
+Navigate to `http://localhost:5173`. The system will automatically construct dynamic MediaPipe tracking using the local webcam.
+
+## 3. Backend Setup (FastAPI)
+
+Open a new terminal tab in the `backend` folder.
 
 ## 3) Backend Setup
+
+### Virtual Environment Setup
+
+It is highly recommended you initialize a localized Python environment via `venv`.
 
 ```bash
 cd backend
 python -m venv .venv_fresh
-.venv_fresh\Scripts\activate
+.venv_fresh\Scripts\activate  # On Windows
+```
+
+### Install Requirements
+
+```bash
 pip install -r requirements.txt
 ```
 
-Create backend/.env with:
+### Environment Configurations
+
+Create a `.env` file inside the `backend` directory providing MongoDB specifics and strict CORS maps:
 
 ```env
 MONGO_URL=mongodb://localhost:27017
@@ -55,22 +74,15 @@ DB_NAME=yoga_posture_db
 CORS_ORIGINS=http://localhost:5173,http://localhost:3000
 ```
 
-Run backend:
+### Start Development Server
 
 ```bash
 uvicorn main:app --reload --port 8000
 ```
 
-Backend docs are available at http://localhost:8000/docs.
+### Start Production Server (WSGI)
 
-## 4) Validate Local Setup
-
-- Open frontend and allow webcam permission.
-- Start a session and verify score updates.
-- End session and verify dashboard reflects latest local session.
-- Verify backend health endpoint: http://localhost:8000/health.
-
-## 5) Production Run Command (Backend)
+When preparing for cloud deployment (e.g., DigitalOcean, AWS), utilize Gunicorn with Uvicorn workers to distribute load:
 
 ```bash
 gunicorn backend.main:app --worker-class=uvicorn.workers.UvicornWorker --timeout=120 --bind 0.0.0.0:8000

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Ideal angle definitions for each yoga asana.
  * Each joint has: ideal angle (degrees), tolerance (±), feedback messages, weight.
  *
@@ -24,6 +24,7 @@ export const POSES = {
       'Arms at sides, palms forward',
       'Crown of head rising',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/CTrRX7DcBSA?si=a-QtVJOdz6hG-kJr',
     color: '#f97316',
     joints: [
       {
@@ -93,11 +94,12 @@ export const POSES = {
     benefits: ['Stretches hips & thighs', 'Opens chest', 'Improves balance'],
     guidance: [
       'Feet 3-4 feet apart',
-      'Right foot out 90°, left foot in 15°',
+      'Right foot out 90Â°, left foot in 15Â°',
       'Extend arms parallel to floor',
       'Reach right hand to shin/ankle',
       'Left arm points to sky',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/NMnmn8Z39Cc?si=4dunrfBSqea94jae',
     color: '#6d28d9',
     joints: [
       {
@@ -163,6 +165,7 @@ export const POSES = {
       'Raise arms overhead',
       'Focus gaze on one point',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/wdln9qWYloU',
     color: '#0d9488',
     joints: [
       {
@@ -214,11 +217,12 @@ export const POSES = {
     benefits: ['Strengthens legs', 'Opens chest', 'Builds stamina'],
     guidance: [
       'Step right foot forward 4 feet',
-      'Back heel at 45°',
+      'Back heel at 45Â°',
       'Bend right knee over ankle',
       'Raise arms overhead',
       'Look up between hands',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/kkGY3xBnaGc?si=pDvFRELL4gDIe5Z3',
     color: '#e11d48',
     joints: [
       {
@@ -227,7 +231,7 @@ export const POSES = {
         ideal: 90,
         tolerance: 15,
         weight: 2.5,
-        feedbackHigh: 'Bend your front knee deeper — aim for 90°',
+        feedbackHigh: 'Bend your front knee deeper — aim for 90Â°',
         feedbackLow: 'Bend the front knee less — keep it over the ankle',
       },
       {
@@ -270,11 +274,12 @@ export const POSES = {
     benefits: ['Strengthens legs & arms', 'Opens hips', 'Improves focus'],
     guidance: [
       'Feet 4-5 feet apart',
-      'Right foot out 90°, left foot in slightly',
+      'Right foot out 90Â°, left foot in slightly',
       'Bend right knee over ankle',
       'Arms parallel to floor',
       'Gaze over right fingertips',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/Re-bJURSzFI?si=rbByfKSJlV-7-nl0',
     color: '#d97706',
     joints: [
       {
@@ -283,7 +288,7 @@ export const POSES = {
         ideal: 90,
         tolerance: 15,
         weight: 2.5,
-        feedbackHigh: 'Bend your front knee to 90° — align with ankle',
+        feedbackHigh: 'Bend your front knee to 90Â° — align with ankle',
         feedbackLow: 'Straighten the front knee slightly',
       },
       {
@@ -340,6 +345,7 @@ export const POSES = {
       'Press heels toward floor',
       'Head between arms',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/6Ep5VzGqDRU?si=Lim_Fhbj8U3NLpQF',
     color: '#0891b2',
     joints: [
       {
@@ -405,6 +411,7 @@ export const POSES = {
       'Roll shoulders back and down',
       'Keep hips on floor',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/Z6U6PNBUQPY',
     color: '#7c3aed',
     joints: [
       {
@@ -452,6 +459,7 @@ export const POSES = {
       'Forehead rests on mat',
       'Breathe deeply',
     ],
+    youtubeUrl: 'https://www.youtube.com/embed/2MJGg-dUKh0',
     color: '#059669',
     joints: [
       {
@@ -483,6 +491,327 @@ export const POSES = {
       },
     ],
   },
+
+  utkatasana: {
+    id: 'utkatasana',
+    name: 'Utkatasana',
+    sanskrit: 'उत्कटासन',
+    english: 'Chair Pose',
+    difficulty: 'Beginner',
+    description: 'A powerful pose that strengthens the legs and core while lifting the heart.',
+    benefits: ['Strengthens thighs and ankles', 'Tones shoulders', 'Stimulates heart'],
+    guidance: [
+      'Bend knees as if sitting in a chair',
+      'Keep weight in your heels',
+      'Raise arms alongside your ears',
+      'Keep chest lifted and spine long'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/VbgoEigDkeY',
+    color: '#eab308',
+    joints: [
+      {
+        name: 'Left Knee', points: [23, 25, 27], ideal: 100, tolerance: 30, weight: 2.5,
+        feedbackHigh: 'Bend knees deeper into the chair', feedbackLow: 'Ease up slightly on the bend'
+      },
+      {
+        name: 'Right Knee', points: [24, 26, 28], ideal: 100, tolerance: 30, weight: 2.5,
+        feedbackHigh: 'Bend knees deeper into the chair', feedbackLow: 'Ease up slightly on the bend'
+      },
+      {
+        name: 'Left Hip', points: [11, 23, 25], ideal: 110, tolerance: 25, weight: 2.0,
+        feedbackHigh: 'Sit lower and maintain a strong core', feedbackLow: 'Lift your hips slightly'
+      },
+      {
+        name: 'Right Hip', points: [12, 24, 26], ideal: 110, tolerance: 25, weight: 2.0,
+        feedbackHigh: 'Sit lower and maintain a strong core', feedbackLow: 'Lift your hips slightly'
+      },
+      {
+        name: 'Shoulders', points: [13, 11, 23], ideal: 160, tolerance: 30, weight: 1.5,
+        feedbackHigh: 'Raise your arms higher alongside your ears', feedbackLow: 'Relax arm tension'
+      }
+    ]
+  },
+
+  chaturanga: {
+    id: 'chaturanga',
+    name: 'Chaturanga Dandasana',
+    sanskrit: 'चतुरङ्गदण्डासन',
+    english: 'Four-Limbed Staff Pose',
+    difficulty: 'Intermediate',
+    description: 'A low plank that requires immense core and arm strength.',
+    benefits: ['Builds core strength', 'Tones arms', 'Strengthens wrists'],
+    guidance: [
+      'Start in high plank',
+      'Lower down keeping elbows tucked in',
+      'Body hovered parallel to the floor',
+      'Keep neck neutral and gaze down'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/gQjA_kUeYUE',
+    color: '#ef4444',
+    joints: [
+      {
+        name: 'Left Elbow', points: [11, 13, 15], ideal: 90, tolerance: 20, weight: 2.5,
+        feedbackHigh: 'Lower down more, bend elbows to 90 degrees', feedbackLow: 'Do not dip too low'
+      },
+      {
+        name: 'Right Elbow', points: [12, 14, 16], ideal: 90, tolerance: 20, weight: 2.5,
+        feedbackHigh: 'Lower down more, bend elbows to 90 degrees', feedbackLow: 'Do not dip too low'
+      },
+      {
+        name: 'Spine/Hips', points: [11, 23, 25], ideal: 180, tolerance: 15, weight: 3.0,
+        feedbackHigh: 'Lift your hips to align with your spine', feedbackLow: 'Lower your hips, do not arch back'
+      },
+      {
+        name: 'Knees', points: [23, 25, 27], ideal: 180, tolerance: 15, weight: 2.0,
+        feedbackHigh: 'Keep your legs straight and strong', feedbackLow: 'Avoid overextending knees'
+      }
+    ]
+  },
+
+  upwarddog: {
+    id: 'upwarddog',
+    name: 'Urdhva Mukha Svanasana',
+    sanskrit: 'ऊर्ध्वमुखश्वानासन',
+    english: 'Upward-Facing Dog',
+    difficulty: 'Beginner',
+    description: 'A chest-opening backbend that stretches the full front body.',
+    benefits: ['Improves posture', 'Stretches chest & lungs', 'Firms buttocks'],
+    guidance: [
+      'Lie face down',
+      'Press into hands, straighten arms',
+      'Lift torso and thighs off the floor',
+      'Roll shoulders back'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/MhE07IihK3Y',
+    color: '#14b8a6',
+    joints: [
+      {
+        name: 'Elbows', points: [11, 13, 15], ideal: 175, tolerance: 15, weight: 2.5,
+        feedbackHigh: 'Straighten your arms fully', feedbackLow: 'Avoid hyperextending elbows'
+      },
+      {
+        name: 'Spine Arc', points: [0, 11, 23], ideal: 140, tolerance: 25, weight: 2.0,
+        feedbackHigh: 'Lift your chest and gaze upwards', feedbackLow: 'Do not over-arch your neck'
+      },
+      {
+        name: 'Hips', points: [11, 23, 25], ideal: 160, tolerance: 20, weight: 2.0,
+        feedbackHigh: 'Allow hips to drop slightly for the backbend', feedbackLow: 'Lift thighs off the mat'
+      }
+    ]
+  },
+
+  navasana: {
+    id: 'navasana',
+    name: 'Navasana',
+    sanskrit: 'नावासन',
+    english: 'Boat Pose',
+    difficulty: 'Intermediate',
+    description: 'A core-strengthening V-shape balance on the sitting bones.',
+    benefits: ['Tones abdominals', 'Strengthens spine', 'Improves digestion'],
+    guidance: [
+      'Balance on your sitting bones',
+      'Keep legs straight or knees bent',
+      'Lean torso back slightly',
+      'Extend arms forward parallel to ground'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/FwAEn11Oiyw',
+    color: '#3b82f6',
+    joints: [
+      {
+        name: 'Hip Angle (V-Shape)', points: [11, 23, 25], ideal: 90, tolerance: 20, weight: 3.0,
+        feedbackHigh: 'Lean back and lift legs to create a V-shape', feedbackLow: 'Close the gap slightly'
+      },
+      {
+        name: 'Knees', points: [23, 25, 27], ideal: 175, tolerance: 20, weight: 2.0,
+        feedbackHigh: 'Straighten your legs if possible', feedbackLow: 'Slightly bend knees if hamstrings are tight'
+      },
+      {
+        name: 'Arms', points: [13, 11, 23], ideal: 90, tolerance: 25, weight: 1.5,
+        feedbackHigh: 'Reach arms straight forward', feedbackLow: 'Relax shoulders'
+      }
+    ]
+  },
+
+  paschimottanasana: {
+    id: 'paschimottanasana',
+    name: 'Paschimottanasana',
+    sanskrit: 'पश्चिमोत्तानासन',
+    english: 'Seated Forward Bend',
+    difficulty: 'Beginner',
+    description: 'A deeply calming forward fold that stretches the entire back body.',
+    benefits: ['Stretches hamstrings and spine', 'Calms the mind', 'Relieves stress'],
+    guidance: [
+      'Sit with legs extended forward',
+      'Inhale and lengthen spine',
+      'Exhale and fold forward over legs',
+      'Reach for toes or ankles'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/T8sGVKpwFOw',
+    color: '#8b5cf6',
+    joints: [
+      {
+        name: 'Hip Fold', points: [11, 23, 25], ideal: 30, tolerance: 25, weight: 3.0,
+        feedbackHigh: 'Fold deeper from the hips', feedbackLow: 'Ease up if straining the lower back'
+      },
+      {
+        name: 'Knees', points: [23, 25, 27], ideal: 175, tolerance: 15, weight: 2.0,
+        feedbackHigh: 'Keep your legs straight against the floor', feedbackLow: 'Micro-bend knees if hamstrings hurt'
+      },
+      {
+        name: 'Arms Reaching', points: [11, 13, 15], ideal: 170, tolerance: 20, weight: 1.5,
+        feedbackHigh: 'Reach forward to grasp your feet', feedbackLow: 'Relax your grip'
+      }
+    ]
+  },
+
+  setubandhasana: {
+    id: 'setubandhasana',
+    name: 'Setu Bandhasana',
+    sanskrit: 'सेतुबन्धसर्वाङ्गासन',
+    english: 'Bridge Pose',
+    difficulty: 'Beginner',
+    description: 'A gentle inversion and backbend that opens the chest and hip flexors.',
+    benefits: ['Stretches chest and neck', 'Calms the brain', 'Stimulates thyroid'],
+    guidance: [
+      'Lie on your back, knees bent',
+      'Feet flat on the floor close to hips',
+      'Press into feet and lift hips high',
+      'Roll shoulders under'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/wzXGubtI0pY',
+    color: '#ec4899',
+    joints: [
+      {
+        name: 'Knees', points: [24, 26, 28], ideal: 90, tolerance: 20, weight: 2.0,
+        feedbackHigh: 'Walk heels closer to your body', feedbackLow: 'Move feet slightly forward'
+      },
+      {
+        name: 'Hip Extension', points: [11, 23, 25], ideal: 170, tolerance: 20, weight: 3.0,
+        feedbackHigh: 'Press into your feet and lift hips higher', feedbackLow: 'Do not overextend your lower back'
+      }
+    ]
+  },
+
+  anjaneyasana: {
+    id: 'anjaneyasana',
+    name: 'Anjaneyasana',
+    sanskrit: 'अञ्जनेयासन',
+    english: 'Crescent Lunge',
+    difficulty: 'Beginner',
+    description: 'A deep lunge that stretches the hip flexors and opens the chest.',
+    benefits: ['Opens hips', 'Stretches quadriceps', 'Builds balance'],
+    guidance: [
+      'Drop back knee to the floor',
+      'Front knee bent at 90 degrees',
+      'Sweep arms overhead',
+      'Lift your chest to the sky'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/N-0QJkEIToI',
+    color: '#06b6d4',
+    joints: [
+      {
+        name: 'Front Knee', points: [24, 26, 28], ideal: 90, tolerance: 20, weight: 2.5,
+        feedbackHigh: 'Bend front knee deeper', feedbackLow: 'Keep knee safely above the ankle'
+      },
+      {
+        name: 'Back Hip Extension', points: [11, 23, 25], ideal: 160, tolerance: 20, weight: 2.0,
+        feedbackHigh: 'Sink hips lower and stretch the back quad', feedbackLow: 'Ease up the stretch'
+      },
+      {
+        name: 'Arms Up', points: [13, 11, 23], ideal: 170, tolerance: 20, weight: 1.5,
+        feedbackHigh: 'Reach your arms straight up', feedbackLow: 'Relax the shoulders'
+      }
+    ]
+  },
+
+  malasana: {
+    id: 'malasana',
+    name: 'Malasana',
+    sanskrit: 'मालासन',
+    english: 'Garland Pose',
+    difficulty: 'Beginner',
+    description: 'A deep squat that opens the hips and helps with digestion.',
+    benefits: ['Opens hips and groin', 'Stretches ankles', 'Improves digestion'],
+    guidance: [
+      'Squat with feet mat-width apart',
+      'Turn toes out slightly',
+      'Bring palms to heart center',
+      'Use elbows to press knees open'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/5yH1z2kKpt0',
+    color: '#10b981',
+    joints: [
+      {
+        name: 'Knee Flexion', points: [23, 25, 27], ideal: 40, tolerance: 25, weight: 3.0,
+        feedbackHigh: 'Sink your hips deeper into the squat', feedbackLow: 'Raise your hips if knees ache'
+      },
+      {
+        name: 'Hip Flexion', points: [11, 23, 25], ideal: 50, tolerance: 25, weight: 2.0,
+        feedbackHigh: 'Lean forward slightly and squat lower', feedbackLow: 'Lift your chest up more'
+      }
+    ]
+  },
+
+  ardhamatsyendrasana: {
+    id: 'ardhamatsyendrasana',
+    name: 'Ardha Matsyendrasana',
+    sanskrit: 'अर्धमत्स्येन्द्रासन',
+    english: 'Half Lord of the Fishes',
+    difficulty: 'Intermediate',
+    description: 'A seated spinal twist that energizes the spine and stimulates digestion.',
+    benefits: ['Stimulates liver and kidneys', 'Stretches shoulders and neck', 'Energizes the spine'],
+    guidance: [
+      'Sit comfortably on the floor',
+      'Bend one knee and cross the other foot over it',
+      'Twist torso toward the crossed leg',
+      'Hook opposite elbow outside the knee'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/iZWz0P1i6E0',
+    color: '#6366f1',
+    joints: [
+      {
+        name: 'Knee Flexion', points: [24, 26, 28], ideal: 50, tolerance: 30, weight: 2.0,
+        feedbackHigh: 'Bend knee to bring foot closer to body', feedbackLow: 'Relax the leg'
+      },
+      {
+        name: 'Spinal Alignment', points: [0, 11, 23], ideal: 170, tolerance: 20, weight: 2.0,
+        feedbackHigh: 'Sit up straight before twisting', feedbackLow: 'Do not lean back'
+      }
+    ]
+  },
+
+  utthitaparsvakonasana: {
+    id: 'utthitaparsvakonasana',
+    name: 'Utthita Parsvakonasana',
+    sanskrit: 'उत्थितपार्श्वकोणासन',
+    english: 'Extended Side Angle',
+    difficulty: 'Intermediate',
+    description: 'A standing pose that creates a long line of energy from heel to fingertips.',
+    benefits: ['Strengthens legs', 'Stretches groins and spine', 'Improves stamina'],
+    guidance: [
+      'Wide stance, turn front foot out',
+      'Bend front knee to 90 degrees',
+      'Rest forearm on thigh or hand to floor',
+      'Extend top arm over ear'
+    ],
+    youtubeUrl: 'https://www.youtube.com/embed/R1x1LpYwQEY',
+    color: '#f43f5e',
+    joints: [
+      {
+        name: 'Front Knee', points: [24, 26, 28], ideal: 90, tolerance: 20, weight: 2.5,
+        feedbackHigh: 'Bend your front knee to 90 degrees', feedbackLow: 'Keep knee over ankle'
+      },
+      {
+        name: 'Back Leg', points: [23, 25, 27], ideal: 175, tolerance: 15, weight: 2.0,
+        feedbackHigh: 'Keep the back leg straight and strong', feedbackLow: 'Micro-bend if needed'
+      },
+      {
+        name: 'Extended Arm', points: [13, 11, 23], ideal: 160, tolerance: 25, weight: 1.5,
+        feedbackHigh: 'Extend top arm straight over your ear', feedbackLow: 'Relax shoulder away from ear'
+      }
+    ]
+  }
+
 };
 
 export const POSE_LIST = Object.values(POSES);

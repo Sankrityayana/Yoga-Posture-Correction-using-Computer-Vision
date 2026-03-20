@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import PoseCamera from '../components/PoseCamera.jsx';
+import PoseReference from '../components/PoseReference.jsx';
 import FeedbackPanel from '../components/FeedbackPanel.jsx';
 import ScoreMeter from '../components/ScoreMeter.jsx';
 import PoseGuide from '../components/PoseGuide.jsx';
@@ -103,7 +104,7 @@ export default function LiveSession() {
                 className={`px-5 py-2 rounded-xl font-bold text-sm transition-all duration-200 ${
                   isActive
                     ? 'bg-red-500/20 border border-red-500/40 text-red-300 hover:bg-red-500/30'
-                    : 'bg-gradient-to-r from-saffron-500 to-orange-500 text-white shadow-lg shadow-saffron-500/30 hover:scale-105'
+                    : 'bg-linear-to-r from-saffron-500 to-orange-500 text-white shadow-lg shadow-saffron-500/30 hover:scale-105'
                 }`}
               >
                 {isActive ? '⏹ End Session' : '▶ Start Session'}
@@ -144,7 +145,7 @@ export default function LiveSession() {
         </AnimatePresence>
 
         {/* Main layout: Camera left, Controls right */}
-        <div className="grid lg:grid-cols-5 gap-5">
+        <div className="grid lg:grid-cols-5 gap-4">
           {/* Camera (3/5) */}
           <div className="lg:col-span-3 space-y-4">
             <PoseCamera
@@ -204,6 +205,11 @@ export default function LiveSession() {
             {/* Pose Guide */}
             <PoseGuide pose={pose} />
           </div>
+        </div>
+
+        {/* YouTube Tutorial — full width at the bottom */}
+        <div className="mt-6">
+          <PoseReference pose={pose} />
         </div>
       </div>
     </div>

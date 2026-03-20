@@ -279,7 +279,7 @@ export const POSES = {
       'Arms parallel to floor',
       'Gaze over right fingertips',
     ],
-    youtubeUrl: 'https://www.youtube.com/embed/MCaCC1C4mHQ',
+    youtubeUrl: 'https://www.youtube.com/embed/Re-bJURSzFI?si=rbByfKSJlV-7-nl0',
     color: '#d97706',
     joints: [
       {
